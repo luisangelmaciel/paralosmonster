@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_theme_company_complete_animation -->
+  <title>Mascaras Papecraft</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #f4511e;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  
+ .accordion {
+  background-color: #f4511e;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #db3b0a; 
+}
+
+.panela {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+} 
+
+
+
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f4511e;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  color: #fff;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #f6673c;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #db3b0a;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* Style the close button */
+.topright {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.topright:hover {color: red;}
+
+
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">PapelCrafer</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#services">Todos los diseños</a></li>
+        <li><a href="#services"> Diseños Love</a></li>
+        <li><a href="#portfolio">Diseños Gratis</a></li>
+        <li><a href="#pago">Formas de pago</a></li>
+        <li><a href="#faq">FAQ</a></li>
+            </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Diseños para imprimir Mascaras y piezas de Papelcraft </h1> 
+  <p>Descarga, imprime, diviertete armandolo y tomate la foto</p> 
+</div>
+
+
+
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+    <h4>Hecha a volar la imaginación</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://momuscraft.com/images/MascaraT-rex/Mascara_t-rex.png" alt="Paris" width="400" height="300">
+        <p><strong>Todos los diseños</strong></p>
+             <p>Para todos los gustos</p>
+        <p></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://momuscraft.com/images/MascaraConejo/Mascara_conejo.png" alt="New York" width="400" height="300">
+        <p><strong>Diseños Love </strong></p>
+        <p>Los diseños que todo mundo ama</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://momuscraft.com/images/MascaraJoker/Mascara_joker.png" alt="San Francisco" width="400" height="300">
+        <p><strong>Diseños Gratis</strong></p>
+        <p>El diseño de la semana</p>
+         <br><a href="conejo.pdf" download><button class="btn btn-default btn-lg">Descarga1</button>
+         <br><a href="/conejo.pdf" download><button class="btn btn-default btn-lg">Descarga2</button></a>
+<br><a href="hihello/conejo.pdf" download><button class="btn btn-default btn-lg">Descarga3</button>
+         <br><a href="/hihello/conejo.pdf" download><button class="btn btn-default btn-lg">Descarga4</button></a>
+         
+         
+         
+
+         
+         
+      </div>
+    </div>
+  </div><br>
+  
+  
+  <!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Hola, aqui estan para ti los diseños más padres de mascaras y piezas papelcraft</h2><br>
+      <h4>Primer paso, escoge los que más te gusten de entre los más de 100 diseños. Segundo, selecciona la forma que más te convenga (revista tooodas las opciones aquí). Tercero envianos tu lista por whatsapp o email y en menos de una hora te enviamos tus diseños</p> <p>Registrate, adjunta tu comprobante de pago y descarga</p>
+          <br><button class="btn btn-default btn-lg">Registrate</button>
+
+  </div>
+</div>
+
+<hr>
+
+  <h2>¡¡Gracias ❤️ Papelcreafers!!</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"Me dieron confianza, esta bien explicado y te atienden de volada"<br><span>Sofia de la CDMX. Comentario de Facebook</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Se la rifaron, rapidos, seguro, si abren los archivos"<br><span>Carlos de Puebla. Comentario de Whatsapp</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Gracias. Bien explicado, facil para imprimir y te lo envian rapidisimo."<br><span>Nadia de Morelos. Comentario de Facebook</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previo</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
+</div>
+
+<hr>
+
+<!-- Container (Pricing Section) -->
+<div id="pago" class="container-fluid">
+  <div class="text-center">
+    <h2>Llevele, Llevele</h2>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>El iniciador</h1>
+        </div>
+        <div class="panel-body">
+      <p><strong>¡2 diseños!</strong> </p>
+          <p><strong>1</strong> del catalogo general</p>
+          <p><strong>1</strong> del catalogo love</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$30</h3>
+          <h4>pesos mexicanos</h4>
+          <button class="btn btn-lg">Damé este</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>El Pro</h1>
+        </div>
+        <div class="panel-body">
+           <p><strong>¡¡10 diseños!!</strong> </p>
+          <p><strong>9</strong> del catalogo general</p>
+          <p><strong>1</strong> del catalogo love</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$60</h3>
+          <h4>pesos mexicanos</h4>
+          <button class="btn btn-lg">¡Me lo llevo!</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Super Mega Pro</h1>
+        </div>
+        <div class="panel-body">
+<p><strong>SOLO DURANTE SEPTIEMBRE 2021</strong></p>
+<p><strong>¡¡¡30 diseños!!!</strong></p>
+<p><strong>20</strong> del catalogo general</p>
+          <p><strong>10</strong> del catalogo love</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$150</h3>
+          <h4>pesos mexicanos</h4>
+          <button class="btn btn-lg">¡¡Quiero este!!</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+    <h2>PREGUNTAS FRECUENTES</h2>
+
+<button class="accordion">Section 1</button>
+<div id="faq" class="panela">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panela">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panela">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<hr>
+    <h2>Formas de pago</h2>
+    <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Mercado Libre</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">PayPal</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">OXXO</button>
+  <button class="tablinks" onclick="openCity(event, 'Transfer')">Transferencia</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Mercado libre</h3>
+  <p>Forma</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>PayPal</h3>
+  <p>Explicar</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Oxxo</h3>
+  <p>Explicar</p>
+</div>
+
+<div id="Transfer" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Trasnferencia</h3>
+  <p>Explicar</p>
+</div>
+
+  </div>
+</div>
+<hr>
+
+<!-- form -->
+<footer class="container-fluid" >
+
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+   <form class="form-inline">¿Quieres te enviemos el templete de la semana gratis? <br>
+    <input type="email" class="form-control" size="50" placeholder="Dejanos tu email"> <br>
+    <button type="button" class="btn btn-danger">¡Si quiero!</button>
+  </form>
+  <hr>
+  <h5>Recuerda hacer tus piezas con mucho ❤️ y mucha paciencia. </h5> <br> 
+  <h6><strong>Copyright © 2018-2020 PapelCrafer</strong> <br>Powered by <a href="https://www.maciel.monsters" title="Gracias Monster">EmePe.Monsters</a></h6>
+
+
+
+</footer>
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+
+
+
+
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+
+
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+
+</script>
+
+</body>
+</html>
